@@ -1,14 +1,18 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="fastsql">
   <head>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="bootstrap/css/template.css" rel="stylesheet">
     <script src="angular.min.js"></script>
   </head>
   <body>
-    <div>
+    <div class="well">
       <label>Name:</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
       <hr>
       <h1>Hello {{yourName}}!</h1>
     </div>
+    <footer>FastSQL - MySQL Explorer | Made with <img src="images/heart.png"> in New York by <a href="http://etaware.com">Etaware LLC</a></footer>
   </body>
 </html>
