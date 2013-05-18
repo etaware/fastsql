@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="fastsql">
+<html data-ng-app="fastsql">
   <head>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -9,11 +9,13 @@
     <title>FastSQL by Etaware</title>
   </head>
   <body>
-    <div class="well">
-      <div ng-view></div>
+  <center>
+    <div class="well" style="width:800px; text-align:left;">
+      <div data-ng-view=""></div>
     </div>
-    <footer>FastSQL - MySQL Explorer &bull; Made with <img src="images/heart.png"> in New York by <a href="http://etaware.com">Etaware LLC</a></footer>
-  
+
+    <footer><a href="http://fastsql.net">FastSQL</a> - MySQL Explorer &bull; Made with <img src="images/heart.png"> in New York by <a href="http://etaware.com">Etaware LLC</a></footer>
+   </center>  
     <script src="angular.min.js"></script>
     <script src="fastsql.js"></script>  
   
