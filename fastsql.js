@@ -15,7 +15,7 @@ fastsql.config(function($routeProvider) {
 	
 	// set what views are displayed for each change in the URL.
 	$routeProvider
-	.when("/", { controller: 'loginCntl', templateUrl: 'test.html' })
+	.when("/", { controller: 'loginCntl', templateUrl: 'views/login.html' })
 	.otherwise({ redirectTo: '/' });
 	
 });
@@ -24,7 +24,7 @@ fastsql.config(function($routeProvider) {
 
 fastsql.controller("loginCntl", function($scope) {
 
-	$scope.message = "hey";
+	$scope.host = "localhost";
 
 });
 
