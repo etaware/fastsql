@@ -1,4 +1,4 @@
-body { background-color:#5d87a1; padding:20%; }
+body { font-family: 'Roboto Slab', serif; background-color:#5d87a1; padding:20%; color:black; }
 
 footer { color:white; text-align:center; }
 footer a { color:white; font-weight:bold; }
