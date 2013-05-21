@@ -3,7 +3,7 @@
 /****************************************************
 
 * Project Name: FastSQL
-* Purpose: To make routine modifications to databases under the control of MySQL.
+* Purpose: Single Page application to control MySQL
 * Author: Zach Alam, Etaware LLC
 * License: The MIT License (MIT)  -  http://opensource.org/licenses/MIT
 
@@ -14,24 +14,25 @@ $data = file_get_contents("php://input");
 $data = json_decode($data);
 
 
-// expects 3 paramaters
-$user = $data->user;
-$pass = $data->pass;
-$serv = $data->serv;
-
-
-if($user && $pass && $serv)
+if($data->user && $data->pass && $data->serv)
 {
 	// check connection
-	$mysqli = new mysqli($serv,$user,$pass);
+	$mysqli = new mysqli($data->serv,$data->user,$data->pass);
 	
 	if(!mysqli_connect_error())
 	{
+		// successful login	
+		
 		// save session vars
+		session_start();
+		$_SESSION['user'] = $data->user;
+		$_SESSION['pass'] = $data->pass;
+		$_SESSION['serv'] = $data->serv;
+		
 		print json_encode(array("success"=>true));
 	}
 	else print json_encode(array("error"=>"Invalid MySQL Credentials.")); 
-} else print json_encode(array("error"=>"Missing Connection Variables."));
+} else print json_encode(array("error"=>"MySQL Username, Password, & Server are required."));
 
 
 

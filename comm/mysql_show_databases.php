@@ -9,12 +9,15 @@
 
 ****************************************************/
 
-session_start();
+require_once("mysql_verify_connect.php");
 
-// start a mysqli connection
-if($_SESSION['db']) $mysqli = new mysqli($_SESSION['serv'],$_SESSION['user'],$_SESSION['pass'],$_SESSION['db']);
-else $mysqli = new mysqli($_SESSION['serv'],$_SESSION['user'],$_SESSION['pass']);
+$result = $mysqli->query("show databases");
 
+while($row = $result->fetch_assoc())
+{
+	$list_dbs[] = $row['Database'];	
+}
 
+print json_encode($list_dbs);
 
 ?>

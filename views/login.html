@@ -1,14 +1,19 @@
 <!-- login form -->
 
-<form ng-submit="loginSubmit()">
+<h1>FastSQL</h1>
+Interact with your MySQL databases in real time with essentially zero delay. 
+To get started, enter your MySQL credentials in the form below.
+<hr>
 
 <table style="width:100%;"><tr>
 
 <td>
+<form ng-submit="loginSubmit()">
+
 
 <div class="input-prepend">
 <span class="add-on"><i class="icon-user"></i> </span>
-<input type="text" placeholder="MySQL Username" ng-model="login.user" style="width:150px;"> 
+<input type="text" placeholder="MySQL Username" ng-model="login.user" style="width:200px;"> 
 </div>
 
 </td>
@@ -16,7 +21,7 @@
 
 <div class="input-prepend">
 <span class="add-on"><i class="icon-lock"></i> </span>
-<input type="password" placeholder="MySQL Password" ng-model="login.pass" style="width:150px;"> 
+<input type="password" placeholder="MySQL Password" ng-model="login.pass" style="width:200px;"> 
 </div>
 
 </td>
@@ -24,17 +29,16 @@
 
 <div class="input-prepend">
 <span class="add-on"><i class="icon-hdd"></i> </span>
-<input type="text" placeholder="MySQL Server" ng-model="login.serv" value="localhost" style="width:150px;"> 
+<input type="text" placeholder="MySQL Server" ng-model="login.serv" style="width:200px;"> 
 </div>
 
 </td>
-<td><input type="submit" class="btn btn-primary" value="Connect To MySQL"> </td>
-
+<td><input type="submit" class="btn btn-primary" value="Connect To MySQL"> </form> </td>
 
 
 </table>
 
 
-</form>
+
 
 

@@ -11,9 +11,7 @@
 
 session_start();
 
-// start a mysqli connection
-if($_SESSION['db']) $mysqli = new mysqli($_SESSION['serv'],$_SESSION['user'],$_SESSION['pass'],$_SESSION['db']);
-else $mysqli = new mysqli($_SESSION['serv'],$_SESSION['user'],$_SESSION['pass']);
+print json_encode(array("db" => $_SESSION['db']));
 
 
 

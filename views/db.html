@@ -1,0 +1,7 @@
+<h1>Select a database</h1>
+FastSQL found the following databases under your control. Choose one to begin interaction.
+<hr>
+
+<button ng-repeat="database in databases" ng-click="chooseDb(database)" class="btn btn-primary" style="margin:5px;">{{ database }}</button>
+
+
